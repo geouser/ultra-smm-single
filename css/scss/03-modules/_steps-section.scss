@@ -13,6 +13,15 @@
         text-align: center;
         position: relative;
 
+        @media (max-width: 767px) {
+            width: 100%;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
         &.phase-1 {
             background-color: #EBECED;
         }
@@ -31,6 +40,10 @@
             color: #4e4e4e;
             font-family: 'Roboto';
             margin-bottom: 5px;
+
+            @media (max-width: 991px) {
+                font-size: 18px;
+            }
         }
 
         &-title {
@@ -39,6 +52,10 @@
             color: #212121;
             font-family: $rc;
             font-weight: 700;
+
+            @media (max-width: 991px) {
+                font-size: 18px;
+            }
         }
 
 
@@ -106,6 +123,15 @@
         z-index: 5;
         cursor: pointer;
 
+        @media (max-width: 991px) {
+            top: 60px
+        }
+
+        @media (max-width: 767px) {
+            top: -50px;
+            border-color: #F84545;
+        }
+
         &:before {
             display: none;
         }
@@ -116,6 +142,10 @@
             -o-transform: rotate(-135deg);
             transform: rotate(-135deg);
             left: 85px;
+
+            @media (max-width: 991px) {
+                left: 35px;
+            }
         }
 
         &.slick-next {
@@ -124,12 +154,20 @@
             -o-transform: rotate(45deg);
             transform: rotate(45deg);
             right: 85px;
+
+            @media (max-width: 991px) {
+                right: 35px;
+            }
         }
     }
 
     .slide {
         padding: 55px 80px;
         color: #4e4e4e;
+
+        @media (max-width: 991px) {
+            padding: 40px 30px;
+        }
 
         p {
             font-family: $rs;
@@ -146,12 +184,20 @@
             font-size: 32px;
             font-family: $rc;
             margin-bottom: 25px;
+
+            @media (max-width: 991px) {
+                margin-bottom: 35px;
+            }
         }
 
         &__general {
             text-align: left;
             font-size: 16px;
             padding: 0 125px;
+
+            @media (max-width: 991px) {
+                padding: 0;
+            }
         }
 
         &__features {
@@ -165,9 +211,26 @@
             margin-bottom: 25px;
             padding-right: 80px;
 
+            @media (max-width: 991px) {
+                padding-right: 20px;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+                padding-right: 0;
+            }
+
             &:nth-child(2n) {
                 padding-right: 0;
                 padding-left: 80px;
+
+                @media (max-width: 991px) {
+                    padding-left: 20px;
+                }
+
+                @media (max-width: 767px) {
+                    padding-left: 0;
+                }
             }
 
             &__title {

@@ -1,7 +1,35 @@
 .blog-section {
     text-align: center;
+    .container {
+        @include flex($alignI: stretch, $justify: center);
+
+        @media (max-width: 500px) {
+            margin-bottom: -50px;
+        }
+    }
     .post-card {
         width: 310px;
         margin: 0 70px;
+
+        @media (max-width: 1024px) {
+            margin: 0 20px;
+        }
+
+        @media (max-width: 767px) {
+            width: -webkit-calc(50% - 30px);
+            width: calc(50% - 30px);
+            margin: 0 15px;
+
+            height: auto;
+
+            .info {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 500px) {
+            width: 260px;
+            margin-bottom: 50px;
+        }
     }
 }

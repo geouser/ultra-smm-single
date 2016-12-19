@@ -34,14 +34,32 @@
     .column {
         position: relative;
 
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+
         .section-title {
             text-align: inherit;
+
+            @media (max-width: 991px) {
+                text-align: center;
+            }
         }
 
         &.first-column {
             padding: 0 75px 0 45px;
             border-right: 2px solid #EEEEEE;
             text-align: right;
+
+            @media (max-width: 991px) {
+                border-right: 0;
+                text-align: left;
+                padding: 0 75px 100px;
+            }
+
+            @media (max-width: 767px) {
+                padding: 0 20px 100px;
+            }
 
             .text-container {
                 font-size: 16px;
@@ -62,11 +80,24 @@
                 position: absolute;
                 bottom: 0;
                 right: 70px;
+
+                @media (max-width: 991px) {
+                    position: static;
+                    margin-top: 25px;
+                }
             }
         }
 
         &.last-column {
             padding: 0 45px 0 70px;
+
+            @media (max-width: 991px) {
+                padding: 0 75px;
+            }
+
+            @media (max-width: 767px) {
+                padding: 0 20px;
+            }
 
             .pre-title {
                 position: absolute;
@@ -76,6 +107,12 @@
                 font-weight: 700;
                 font-size: 18px;
                 text-transform: uppercase;
+
+                @media (max-width: 991px) {
+                    position: static;
+                    display: block;
+                    text-align: center;
+                }
             }
 
             #feedback {
