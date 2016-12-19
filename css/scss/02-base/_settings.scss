@@ -7,6 +7,16 @@
 html,
 body {
 	height: 100%;
+    color: #212121;
+}
+
+.section-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #212121;
+    font-family: $rc, sans-serif;
+    font-weight: 700;
+    text-align: center;
 }
 
 

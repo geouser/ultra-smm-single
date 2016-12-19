@@ -1,0 +1,64 @@
+.portfolio-section {
+    overflow: hidden;
+}
+.portfolio-block {
+    padding-top: 100px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    height: 300px;
+
+    .container {
+        position: relative;
+        height: 100%;
+        z-index: 1;
+        @include flex($justify: flex-start, $alignI: flex-start);
+    }
+
+    &__label {
+        width: 500px;
+        text-align: right;
+        position: relative;
+        z-index: 2;
+        padding-top: 35px;
+
+        h3 {
+            font-family: $rc;
+            color: #4e4e4e;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__preview {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        right: -250px;
+        bottom: -35px;
+        pointer-events: none;
+    }
+
+
+
+    &:nth-child(2n) {
+        background-color: #EAECEF;
+
+        .container {
+            -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+        }
+
+        .portfolio-item__label {
+            text-align: left;
+        }
+
+        .portfolio-item__preview {
+            right: auto;
+            left: -250px;
+        }
+    }
+}

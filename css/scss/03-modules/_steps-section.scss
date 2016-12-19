@@ -1,0 +1,184 @@
+.steps-block {
+    padding-top: 60px;
+}
+.steps-header {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    @include flex($alignI: stretch);
+
+    .phase {
+        width: 25%;
+        padding: 25px 10px;
+        text-align: center;
+        position: relative;
+
+        &.phase-1 {
+            background-color: #EBECED;
+        }
+        &.phase-2 {
+            background-color: #E3E5E8;
+        }
+        &.phase-3 {
+            background-color: #D4D5D7;
+        }
+        &.phase-4 {
+            background-color: #CACCCE;
+        }
+
+        &-num {
+            font-size: 24px;
+            color: #4e4e4e;
+            font-family: 'Roboto';
+            margin-bottom: 5px;
+        }
+
+        &-title {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #212121;
+            font-family: $rc;
+            font-weight: 700;
+        }
+
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background-color: #F84545;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 15px 0 15px;
+            border-color: #F84545 transparent transparent transparent;
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &.active,
+        &:hover {
+            &:after,
+            &:before {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+.steps-slider {
+    background-color: #FAFAFA;
+    margin-bottom: 0;
+
+    .slick-arrow {
+        width: 28px;
+        height: 28px;
+        top: 75px;
+        border-top: 2px solid #CACCCE;
+        border-right: 2px solid #CACCCE;
+        margin-top: -18px;
+        z-index: 5;
+        cursor: pointer;
+
+        &:before {
+            display: none;
+        }
+
+        &.slick-prev {
+            -webkit-transform: rotate(-135deg);
+            -ms-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+            left: 85px;
+        }
+
+        &.slick-next {
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            right: 85px;
+        }
+    }
+
+    .slide {
+        padding: 55px 80px;
+        color: #4e4e4e;
+
+        p {
+            font-family: $rs;
+        }
+
+        &__header {
+            text-align: center;
+            border-bottom: 1px solid #CACCCE;
+            padding-bottom: 30px;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 32px;
+            font-family: $rc;
+            margin-bottom: 25px;
+        }
+
+        &__general {
+            text-align: left;
+            font-size: 16px;
+            padding: 0 125px;
+        }
+
+        &__features {
+            padding-top: 25px;
+            @include flex($alignI: flex-start);
+            margin-bottom: -25px;
+        }
+
+        .feature {
+            width: 50%;
+            margin-bottom: 25px;
+            padding-right: 80px;
+
+            &:nth-child(2n) {
+                padding-right: 0;
+                padding-left: 80px;
+            }
+
+            &__title {
+                color: #f84545;
+                font-size: 16px;
+                font-family: $rs;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}

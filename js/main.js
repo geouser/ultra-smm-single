@@ -38,6 +38,16 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Slider
+    ---------------------------*/
+    $('.steps-slider').slick({
+        dots: false,
+        arrows: true,
+        fade: true,
+        adaptiveHeight: true
+    })
+
 
     /*---------------------------
                                   Magnific popup

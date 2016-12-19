@@ -5,6 +5,9 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import url("https://ultraweb.ae/wp-content/themes/ultraweb/style.css");
+@import url("https://ultraweb.ae/wp-content/themes/ultraweb/assets/stylesheets/css/main.css");
+@import url("https://ultraweb.ae/wp-content/plugins/social-pug/assets/css/style-frontend.css?ver=4.7");
 html {
   font-family: sans-serif;
   /* 1 */
