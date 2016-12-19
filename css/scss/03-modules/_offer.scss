@@ -1,3 +1,37 @@
-.offer {
-    height: 800px;
+.dividedInfo {
+    @include flex($alignI: flex-start);
+    &__left {
+        width: 730px;
+        padding-right: 40px;
+        text-align: left;
+        span {
+            font-size: 30px;
+            margin-top: 10px;
+            display: block;
+        }
+        h1 {
+            margin-top: -10px;
+        }
+    }
+    &__right {
+        width: calc(100% - 730px);
+        text-align: right;
+    }
+}
+
+.appealBlock {
+    display: inline-block;
+    text-align: center;
+    padding: 35px 0;
+    width: 315px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    span {
+        font-size: 30px;
+        display: block;
+        text-align: center;
+    }
+    .button {
+        margin-top: 30px;
+    }
 }
