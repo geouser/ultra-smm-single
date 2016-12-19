@@ -4,9 +4,24 @@
     .column {
         padding: 0 90px;
 
+        @media (max-width: 991px) {
+            padding: 0 15px;
+
+            &.first-column {
+                margin-bottom: 60px;
+            }
+        }
+
         ul li {
             height: 86px;
+            
+            @media (max-width: 1199px) {
+                height: 100px;
+            }
 
+            @media (max-width: 991px) {
+                height: auto;
+            }
         }
 
         ul {
@@ -15,6 +30,10 @@
 
         h3 {
             margin-bottom: 25px;
+
+            @media (max-width: 991px) {
+                text-align: center;
+            }
         }
     }
 }

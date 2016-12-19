@@ -43,7 +43,6 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $('.steps-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         var nxt = nextSlide+1;
-        console.log(nxt);
         $('.phase').removeClass('active');
         $('.phase-'+nxt).addClass('active');
     });
