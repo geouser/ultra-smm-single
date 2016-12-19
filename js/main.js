@@ -41,6 +41,19 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   Slider
     ---------------------------*/
+    $('.steps-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var nxt = nextSlide+1;
+        console.log(nxt);
+        $('.phase').removeClass('active');
+        $('.phase-'+nxt).addClass('active');
+    });
+
+    $('.phase').on('click', function(event) {
+        event.preventDefault();
+        var index = $(this).attr('data-index');
+        $('.steps-slider').slick('slickGoTo', index);
+    });
+
     $('.steps-slider').slick({
         dots: false,
         arrows: true,
