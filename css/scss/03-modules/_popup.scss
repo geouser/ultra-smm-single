@@ -1,0 +1,105 @@
+.projectResultPopup {
+    width: 100%;
+    padding-bottom: 38%;
+    background-color: #bfbfbf;
+    position: relative;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    @media (max-width: 1000px) {
+        padding-bottom: 45%;
+    }
+    @media (max-width: 700px) {
+        height: auto;
+        padding-bottom: 0;
+        background-position: center center;
+        -webkit-background-size: 100% auto;
+             -o-background-size: 100% auto;
+                background-size: 100% auto;
+    }
+}
+
+.resultsInfo {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translateY(-50%);
+    @media (max-width: 1000px) {
+        left: 10%;
+    }
+    @media (max-width: 700px) {
+        left: 0;
+        width: 100%;
+       padding: 20px;
+       position: static;
+       background-color: rgba(255,255,255, .4);
+       -webkit-transform: none;
+          -moz-transform: none;
+           -ms-transform: none;
+            -o-transform: none;
+               transform: none;
+    }
+    @media (max-width: 400px) {
+        padding: 20px 10px;
+    }
+    &__title {
+        font-family:"Roboto Condensed",sans-serif;
+        font-size: 36px;
+        color: #4E4E4E;
+        display: block;
+        @media (max-width: 1000px) {
+            font-size: 28px;
+        }
+        @media (max-width: 700px) {
+            font-size: 24px;
+        }
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
+    }
+    ul {
+        margin-top: 20px;
+        list-style-type: none;
+        border-left: 4px solid #F84545;
+        padding-left: 25px;
+        @media (max-width: 700px) {
+            padding-left: 15px;
+        }
+        li {
+            font-family:"Roboto Slab",sans-serif;
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            strong {
+                font-size: 30px;
+                color: #212121;
+                font-weight: 400;
+            }
+            @media (max-width: 1000px) {
+                font-size: 14px;
+                strong {
+                    font-size: 26px;
+                }
+            }
+            @media (max-width: 700px) {
+                margin-bottom: 0;
+                font-size: 13px;
+                strong {
+                    font-size: 24px;
+                }
+            }
+            @media (max-width: 400px) {
+                font-size: 12px;
+                strong {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .button {
+        margin-top: 26px;
+    }
+}
