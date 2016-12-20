@@ -7,7 +7,10 @@
         line-height: 46px;
 
         &:hover {
-            box-shadow: 0 10px 0 -6px rgb(116,116,116);
+            box-shadow: 0 10px 0 -6px #dd1919;
+            background-color: #F84545;
+            color: #fff;
+            border-color: #F84545;
         }
     }
 }
